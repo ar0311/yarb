@@ -64,16 +64,13 @@ namespace Yarb.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IDocumentStore>()
-           .ToMethod(context =>
-           {
-               var documentStore = new DocumentStore { ConnectionStringName = "RavenDB" };
-               return documentStore.Initialize();
-           })
-
-           .InSingletonScope();
+            kernel.Bind<IDocumentStore>().ToMethod(context =>
+            {
+                var documentStore = new DocumentStore { ConnectionStringName = "RavenDB" };
+                return documentStore.Initialize();
+            }).InSingletonScope();
 
             kernel.Bind<IDocumentSession>().ToMethod(context => context.Kernel.Get<IDocumentStore>().OpenSession()).InRequestScope();
-        }        
+        }
     }
 }
