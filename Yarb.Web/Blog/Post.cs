@@ -14,6 +14,7 @@ namespace Yarb.Web.Blog
         public DateTimeOffset Modified { get; set; }
         public bool AllowComments { get; set; }
         public List<Comment> Comments { get; set; }
+        public List<Tag> Tags { get; set; }
         public string Content { get; set; }
 
     }
@@ -23,4 +24,10 @@ namespace Yarb.Web.Blog
         public string Id { get; set; }
         public DateTimeOffset Created { get; set; }
     }
+
+    public class Tag
+    {
+        public string Name { get; set; }
+    }
+    
 }
