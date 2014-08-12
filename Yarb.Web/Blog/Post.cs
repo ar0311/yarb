@@ -23,6 +23,7 @@ namespace Yarb.Web.Blog
     {
         public string Id { get; set; }
         public DateTimeOffset Created { get; set; }
+        public string Content { get; set; }
     }
 
     public class Tag
@@ -36,7 +37,7 @@ namespace Yarb.Web.Blog
         {
             Default
         }
-        public string Content { get; set; }
+        public string ContentText { get; set; }
     }
     
 }
