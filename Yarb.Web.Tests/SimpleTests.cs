@@ -16,7 +16,8 @@ namespace Yarb.Web.Tests
         {
             docstore = new EmbeddableDocumentStore
             {
-                Configuration = { RunInMemory = true }
+                Configuration = { RunInMemory = true,
+                    RunInUnreliableYetFastModeThatIsNotSuitableForProduction = true }
             };
 
             docstore.Initialize();
