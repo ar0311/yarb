@@ -15,7 +15,7 @@ namespace Yarb.Web.Blog
         public bool AllowComments { get; set; }
         public List<Comment> Comments { get; set; }
         public List<Tag> Tags { get; set; }
-        public string Content { get; set; }
+        public Content Content { get; set; }
 
     }
 
@@ -28,6 +28,15 @@ namespace Yarb.Web.Blog
     public class Tag
     {
         public string Name { get; set; }
+    }
+
+    public class Content
+    {
+        public enum ContentType
+        {
+            Default
+        }
+        public string Content { get; set; }
     }
     
 }
