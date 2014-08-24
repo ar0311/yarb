@@ -52,11 +52,9 @@ namespace Yarb.Web.Tests
             session.Dispose();
 
             session = docstore.OpenSession();
-            var newposts = from p in session.Query<Post>()
-                           where p.IsPublished
-                           select p;
+            var newpost = session.Load<Post>("posts/1");
 
-            Assert.Equal(newposts.First().Title, "This is a test post.");
+            Assert.Equal(newpost.Title, "This is a test post.");
 
             session.Dispose();
         }
