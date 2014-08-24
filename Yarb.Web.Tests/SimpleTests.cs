@@ -55,6 +55,8 @@ namespace Yarb.Web.Tests
                     }
                 };
 
+            post.Slug = SlugConverter.TitleToSlug(post.Title);
+
             session = docstore.OpenSession();
             session.Store(post);
             session.SaveChanges();
