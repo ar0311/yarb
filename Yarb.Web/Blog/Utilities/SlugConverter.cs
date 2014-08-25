@@ -2,14 +2,41 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
+using System;
 
 namespace Yarb.Web.Blog.Utilities
 {
-    public class SlugConverter
+    public static class SlugConverter
     {
+        /// <summary>
+        /// Slugifies a string
+        /// </summary>
+        /// <param name="value">The string value to slugify</param>
+        /// <returns>A URL safe slug representation of the input <paramref name="value"/>.</returns>
+        public static string ToSlug(this string value)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value");
+            }
+
+            if (SlugRegex.IsMatch(value))
+            {
+                return value;
+            }
+
+            return GenerateSlug(value);
+        }
+
+        /// <summary>
+        /// A regular expression for validating slugs.
+        /// Does not allow leading or trailing hypens or whitespace.
+        /// </summary>
+        private static readonly Regex SlugRegex = new Regex(@"(^[a-z0-9])([a-z0-9_-]+)*([a-z0-9])$", RegexOptions.Compiled);
+
         // Implementation credits go to Ayende Rahien's "RacoonBlog"
         // https://github.com/ayende/RaccoonBlog
-        public static string TitleToSlug(string title)
+        public static string GenerateSlug(string title)
         {
             title = HttpUtility.HtmlDecode(title);
 
@@ -27,7 +54,6 @@ namespace Yarb.Web.Blog.Utilities
 
             return title;
         }
-
 
         // http://blogs.msdn.com/michkap/archive/2007/05/14/2629747.aspx
         /// <summary>
