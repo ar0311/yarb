@@ -93,6 +93,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Blog\Utilities\SlugConverterTests.cs" />
     <Compile Include="SimpleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

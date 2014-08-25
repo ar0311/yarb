@@ -23,14 +23,7 @@ namespace Yarb.Web.Tests
 
             docstore.Initialize();
         }
-        [Fact]
-        public void CorrectSlugConversion()
-        {
-            string title = "This is a new blog post";
-            string slug = SlugConverter.TitleToSlug(title);
-
-            Assert.Equal(slug, "this-is-a-new-blog-post");
-        }
+        
         [Fact]
         public void CanSaveAndRetrievePost()
         {
