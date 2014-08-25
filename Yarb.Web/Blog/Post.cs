@@ -10,7 +10,6 @@ namespace Yarb.Web.Blog
     {
         public string Id { get; set; }
         public string Title { get; set; }
-        public string Slug { get; set; }
         public bool IsPublished { get; set; }
         public DateTimeOffset Created { get; set; }
         public DateTimeOffset Modified { get; set; }
