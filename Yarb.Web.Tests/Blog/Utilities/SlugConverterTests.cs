@@ -9,7 +9,7 @@ namespace Yarb.Web.Tests.Blog.Utilities
         public void CorrectSlugConversion()
         {
             string title = "This is a new blog post";
-            string slug = SlugConverter.GenerateSlug(title);
+            string slug = title.ToSlug();
 
             Assert.Equal(slug, "this-is-a-new-blog-post");
         }
