@@ -66,7 +66,7 @@ namespace Yarb.Web.App_Start
         {
             kernel.Bind<IDocumentStore>().ToMethod(context =>
             {
-                var documentStore = new DocumentStore { ConnectionStringName = "RavenDB" };
+                var documentStore = new DocumentStore { ConnectionStringName = "RavenDB", DefaultDatabase = "yarb" };
                 return documentStore.Initialize();
             }).InSingletonScope();
 
