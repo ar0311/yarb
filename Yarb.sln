@@ -5,7 +5,12 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yarb.Web.Tests", "Yarb.Web.Tests\Yarb.Web.Tests.csproj", "{CC76051A-9266-40B0-913C-CCBC8C1BF5E8}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Yarb.Web", "Yarb.Web\Yarb.Web.xproj", "{D4F05F01-84E9-4A8E-9253-419FBD75CF0F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E64852C0-F2E1-4CB3-813E-86EED4B61C85}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Yarb.Web", "src\Yarb.Web\Yarb.Web.xproj", "{D4F05F01-84E9-4A8E-9253-419FBD75CF0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
