@@ -103,12 +103,6 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Yarb.Web\Yarb.Web.csproj">
-      <Project>{3d99d310-9b2c-43fe-b4d3-42f9375234f3}</Project>
-      <Name>Yarb.Web</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

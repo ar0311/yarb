@@ -31,3 +31,4 @@ $tf*/
 packages/
 *.mdf
 *.ldf
+project.lock.json
