@@ -1,4 +1,4 @@
-yarb
-====
+yarb - Yet Another RavenDB Blog
+===============================
 
-A blog engine utilizing ASP.NET MVC 5, RavenDB and Bootstrap.
+A blog engine utilizing ASP.NET Core and RavenDB.
